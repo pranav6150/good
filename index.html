@@ -1,232 +1,377 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Bhargav Portfolio Website HTML CSS | JS</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piano</title>
+    <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Sacramento&family=Satisfy&family=Tangerine&display=swap" rel="stylesheet">
 </head>
 
+<!-- ****************************************************** Design and coding by Peyman Motamedifar ***************************************************
+Website   = peyman-web.ir
+
+Linkedin  = https://www.linkedin.com/in/peymanmotamedifar/
+
+Github    = https://github.com/peymanmotamedifar
+
+Instagram = peyman_web
+
+Email     = peymanmotamedi.web@gmail.com -->
+
 <body>
-  <!-- Move to up button -->
-  <div class="scroll-button">
-    <a href="#home"><i class="fas fa-arrow-up"></i></a>
-  </div>
-  <!-- navgaition menu -->
-  <nav>
-    <div class="navbar">
-      <div class="logo"><a href="#">Portfolio.</a></div>
-      <ul class="menu">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <div class="cancel-btn">
-          <i class="fas fa-times"></i>
-        </div>
-      </ul>
-      <div class="media-icons">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-      </div>
-    </div>
-    <div class="menu-btn">
-      <i class="fas fa-bars"></i>
-    </div>
-  </nav>
 
-  <!-- Home Section Start -->
-  <section class="home" id="home">
-    <!-- Add the video element with the video file path -->
-    <video autoplay loop muted playsinline id="backgroundVideo">
-      <source src="Images/background.mp4" type="video/mp4">
-      <!-- Add more <source> elements for other video formats if needed (e.g., WebM, Ogg) -->
-      Your browser does not support the video tag.
-    </video>
-    <div class="home-content">
-      <div class="text">
-        <div class="text-one">Hello,</div>
-        <div class="text-two">I'm N.R.Bhargav</div>
-        <div class="text-three">Associate Software Engineer</div>
-        <div class="text-four">From India</div>
-      </div>
-      <div class="button">
-        <button>Hire Me</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Section Start -->
-  <section class="about" id="about">
-    <div class="content">
-      <div class="title"><span>About Me</span></div>
-      <div class="about-details">
-        <div class="left">
-          <img src="images/about.jpg" alt="" />
+   <section>
+    <div class="top3">
+        <div>
+          <img src="img/Merk-Yamaha-.png" alt="YAMAHA">
+          
+        <div> <button id="btnsong" onclick="btn2()">Golden Dreams<svg id="play" xmlns="http://www.w3.org/2000/svg" height="24" width="24"><path d="m9.15 17.15 8-5.15-8-5.15ZM12 22.8q-2.25 0-4.213-.85-1.962-.85-3.424-2.312Q2.9 18.175 2.05 16.212 1.2 14.25 1.2 12t.85-4.225Q2.9 5.8 4.363 4.338q1.462-1.463 3.424-2.301Q9.75 1.2 12 1.2t4.225.837q1.975.838 3.438 2.301 1.462 1.462 2.299 3.437Q22.8 9.75 22.8 12q0 2.25-.838 4.212-.837 1.963-2.299 3.426Q18.2 21.1 16.225 21.95q-1.975.85-4.225.85Zm0-2.65q3.425 0 5.788-2.363Q20.15 15.425 20.15 12t-2.362-5.788Q15.425 3.85 12 3.85q-3.425 0-5.787 2.362Q3.85 8.575 3.85 12q0 3.425 2.363 5.787Q8.575 20.15 12 20.15ZM12 12Z"/></svg>
+          <svg id="stop" xmlns="http://www.w3.org/2000/svg" height="24" width="24"><path d="M7.675 16.325h8.65v-8.65h-8.65ZM12 22.8q-2.25 0-4.213-.85-1.962-.85-3.424-2.312Q2.9 18.175 2.05 16.212 1.2 14.25 1.2 12t.85-4.225Q2.9 5.8 4.363 4.338q1.462-1.463 3.424-2.301Q9.75 1.2 12 1.2t4.225.837q1.975.838 3.438 2.301 1.462 1.462 2.299 3.437Q22.8 9.75 22.8 12q0 2.25-.838 4.212-.837 1.963-2.299 3.426Q18.2 21.1 16.225 21.95q-1.975.85-4.225.85Zm0-2.65q3.425 0 5.788-2.363Q20.15 15.425 20.15 12t-2.362-5.788Q15.425 3.85 12 3.85q-3.425 0-5.787 2.362Q3.85 8.575 3.85 12q0 3.425 2.363 5.787Q8.575 20.15 12 20.15ZM12 12Z"/></svg>
+        </button></div>
+        
         </div>
-        <div class="right">
-          <div class="topic">Innovative Thinking Is My Passion</div>
-          <p>
-            Innovative thinking is my passion, the spark that sparks my curiosity and feeds my creativity. I am always
-            looking for new views and creative approaches to each problem that comes my way. I embrace evolution with open
-            arms and see hurdles as stepping stones to breakthroughs rather than barricades. Whether it's devising unique
-            solutions to challenging challenges or venturing into unexplored territory, I'm constantly ready to push the
-            limits of what's possible. For me, innovative thinking is more than a skill; it is a way of life.
-          </p>
-          <div class="button">
-            <button>Download CV</button>
-          </div>
+        <div class="_display">
+            <span>PLAY</span>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- My Skill Section Start -->
-  <section class="skills" id="skills">
-    <div class="content">
-      <div class="title"><span>My Skills</span></div>
-      <div class="skills-details">
-        <div class="text">
-          <div class="topic">Skills Reflects Our Knowledge</div>
-          <p>
-            Expertise in predictive modeling, data processing, and data mining algorithms, as well as hands-on experience
-            architecting, automating, and optimizing mission-critical installations across big infrastructures. Experienced
-            in Configuration Management tools and CI/CD pipeline development. Capable of building, testing, and deploying
-            highly adaptable varied services to translate business and functional qualifications into significant outcomes.
-          </p>
-          <div class="experience">
-            <div class="num">2.5</div>
-            <div class="exp">
-              Years Of <br />
-              Experience
+        <div class="metro">
+            <div>
+                <div><button class="metroOnOf" onclick="btn()"><span></span> <span>Metronome</span></button></div>
+                <input id=demoInput type=number min=0.75 max=1.25 step="0.25" value="1">
+                <button class="vol" onclick="increment()">+</button>
+                <span class="tempo">TEMPO</span>
+                <button class="vol" onclick="decrement()">-</button>
             </div>
-          </div>
         </div>
-        <div class="boxes">
-          <div class="box">
-            <div class="topic">AWS</div>
-            <div class="per">80%</div>
-          </div>
-          <div class="box">
-            <div class="topic">Data Analysis</div>
-            <div class="per">60%</div>
-          </div>
-          <div class="box">
-            <div class="topic">Python, SQL</div>
-            <div class="per">50%</div>
-          </div>
-          <div class="box">
-            <div class="topic">HTML, CSS, JavScript</div>
-            <div class="per">40%</div>
-          </div>
-        </div>
-      </div>
     </div>
-  </section>
+    <div class="top2">-- Peyman Motamedifar --</div>
+    <div class="top1">
+        <span class="l65"></span>
+        <span class="l49"></span>
+        <span class="l83"></span>
+        <span class="l50"></span>
+        <span class="l68"></span>
+        <span class="l70"></span>
+        <span class="l51"></span>
+        <span class="l71"></span>
+        <span class="l52"></span>
+        <span class="l72"></span>
+        <span class="l53"></span>
+        <span class="l74"></span>
+        <span class="l75"></span>
+        <span class="l54"></span>
+        <span class="l76"></span>
+        <span class="l55"></span>
+        <span class="l186"></span>
+        <span class="l222"></span>
+        <span class="l56"></span>
+        <span class="l13"></span>
+        <span class="l57"></span>
+        <span class="l100"></span>
+        <span class="l48"></span>
+        <span class="l101"></span>
+        <span class="l102"></span>
+        <span class="l189"></span>
+        <span class="l107"></span>
+        <span class="l187"></span>
+        <span class="l90"></span>
+        <span class="l88"></span>
+        <span class="l8"></span>
+        <span class="l67"></span>
+        <span class="l81"></span>
+        <span class="l86"></span>
+        <span class="l87"></span>
+        <span class="l66"></span>
+        <span class="l78"></span>
+        <span class="l69"></span>
+        <span class="l77"></span>
+        <span class="l82"></span>
+        <span class="l188"></span>
+        <span class="l190"></span>
+        <span class="l84"></span>
+        <span class="l191"></span>
+        <span class="l89"></span>
+        <span class="l16"></span>
+        <span class="l85"></span>
+        <span class="l97"></span>
+        <span class="l98"></span>
+        <span class="l73"></span>
+        <span class="l99"></span>
+        <span class="l79"></span>
+        <span class="l37"></span>
+        <span class="l40"></span>
+        <span class="l80"></span>
+        <span class="l39"></span>
+        <span class="l219"></span>
+        <span class="l96"></span>
+        <span class="l221"></span>
+        <span class="l110"></span>
+    </div>
+        <div class="d">
+            <div class="dp">
+                <span></span>
 
-  <!-- My Services Section Start -->
-  <section class="services" id="services">
-    <div class="content">
-      <div class="title"><span>My Services</span></div>
-      <div class="boxes">
-        <div class="box">
-          <div class="icon">
-            <i class="fas fa-chart-line"></i>
-          </div>
-          <div class="topic">Data Analysis</div>
-          <p>
-            "Our data analysis service empowers businesses with actionable insights, unlocking the hidden potential of raw
-            data, enabling informed decision-making and driving growth in an ever-changing marketplace."
-          </p>
-        </div>
-        <div class="box">
-          <div class="icon">
-            <i class="fas fa-chart-pie"></i>
-          </div>
-          <div class="topic">Data Visualization</div>
-          <p>
-            "By transforming complex data into captivating visual narratives, our Data Visualization service provides clarity
-            and understanding, enabling businesses to effectively express their information and confidently make data-driven
-            decisions."
-          </p>
-        </div>
-        <div class="box">
-          <div class="icon">
-            <i class="fab fa-aws"></i>
-          </div>
-          <div class="topic">AWS CI/CD</div>
-          <p>
-            "Our AWS CI/CD service accelerates software delivery and increases efficiency by automating the entire software
-            development lifecycle, ensuring seamless integration, continuous testing, and reliable deployment to help
-            businesses thrive in the fast-paced world of cloud computing."
-          </p>
-        </div>
-        <div class="box">
-          <div class="icon">
-            <i class="far fa-paper-plane"></i>
-          </div>
-          <div class="topic">Drone Development</div>
-          <p>
-            "Our Drone Development service pushes the boundaries of innovation by utilizing cutting-edge technology to design
-            and build custom drones, delivering tailored solutions that revolutionize industries ranging from aerial
-            surveillance to logistics and beyond."
-          </p>
-        </div>
-        <div class="box">
-          <div class="icon">
-            <i class="far fa-handshake"></i>
-          </div>
-          <div class="topic">Consultant</div>
-          <p>
-            "By providing personalized guidance and strategic insights, our Consulting service enables small businesses and
-            startups to navigate the competitive landscape, realize their full potential, and achieve long-term success."
-          </p>
-        </div>
-        <div class="box">
-          <div class="icon">
-            <i class="fab fa-slack"></i>
-          </div>
-          <div class="topic">Apps Development</div>
-          <p>
-            "Our Apps Development service transforms ideas into intuitive and high-performance mobile and web applications,
-            delivering seamless user experiences, cutting-edge functionality, and scalable solutions to help businesses
-            thrive in the digital age."
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+                <div data-note="C2"  class="white-key1 pk a65"  >
+                    <div>Do</div>
+                </div>
+                
+                <svg data-note="Db2"  class="Group1 pk a49" width="66" height="458" viewBox="0 0 66 458" fill="none" xmlns="http://www.w3.org/2000/svg"></svg>     
+                
+                <div data-note="D2" class="white-key2 pk a83" >
+                    <div></div>
+                    <div>Re</div>
+                </div>
+                <svg data-note="Eb2"  class="Group1 pk a50 " width="66" height="458" viewBox="0 0 66 458" fill="none" xmlns="http://www.w3.org/2000/svg"></svg> 
+                    
+                
+                <div data-note="E2" class="white-key3 pk a68" >
+                    <div >Me</div>
+                </div>
+                <div data-note="F2" class="white-key1 pk a70" >
+                    <div >Fa</div>
+                </div>
+                <svg data-note="Gb2" class="Group1 pk a51" width="66" height="458" viewBox="0 0 66 458" fill="none" xmlns="http://www.w3.org/2000/svg"></svg>     
+                
+                <div data-note="G2" class="white-key5 pk a71" >
+                    <div></div>
+                    <div>Sol</div>
+                </div>
+                <svg data-note="Ab2" class="Group1 pk a52" width="66" height="458" viewBox="0 0 66 458" fill="none" xmlns="http://www.w3.org/2000/svg"></svg> 
+                <div data-note="A2" class="white-key6 pk a72" >
+                    <div></div>
+                    <div>La</div>
+                </div>
+                <svg data-note="Bb2" class="Group1 pk a53" width="66" height="458" viewBox="0 0 66 458" fill="none" xmlns="http://www.w3.org/2000/svg"></svg> 
+                    
+                
+                <div data-note="B2" class="white-key3 pk a74" >
+                    <div >Si</div>
+                </div>
+                <div data-note="C3" class="white-key1 pk a75" >
+                    <div >Do</div>
+                </div>
+                <svg data-note="Db3" class="Group1 pk a54" width="66" height="458" viewBox="0 0 66 458" fill="none" xmlns="http://www.w3.org/2000/svg"></svg>     
+                
+                <div data-note="D3" class="white-key2 pk a76" >
+                    <div></div>
+                    <div>Re</div>
+                </div>
+                <svg data-note="Eb3" class="Group1 pk a55" width="66" height="458" viewBox="0 0 66 458" fill="none" xmlns="http://www.w3.org/2000/svg"></svg> 
+                    
+                
+                <div data-note="E3" class="white-key3 pk a186" >
+                    <div >Me</div>
+                </div>
+                <div data-note="F3" class="white-key1 pk a222" >
+                    <div >Fa</div>
+                </div>
+                <svg data-note="Gb3" class="Group1 pk a56" width="66" height="458" viewBox="0 0 66 458" fill="none" xmlns="http://www.w3.org/2000/svg"></svg>     
+                
+                <div data-note="G3" class="white-key5 pk a13" >
+                    <div></div>
+                    <div>Sol</div>
+                </div>
+                <svg data-note="Ab3" class="Group1 pk a57" width="66" height="458" viewBox="0 0 66 458" fill="none" xmlns="http://www.w3.org/2000/svg"></svg> 
+                <div data-note="A3" class="white-key6 pk a100" >
+                    <div></div>
+                    <div>La</div>
+                </div>
+                <svg data-note="Bb3" class="Group1 pk a48" width="66" height="458" viewBox="0 0 66 458" fill="none" xmlns="http://www.w3.org/2000/svg"></svg> 
+                    
+                
+                <div data-note="B3" class="white-key3 pk a101" >
+                    <div >Si</div>
+                </div>
+                <div data-note="C4" class="white-key1 pk a102" >
+                    <div >Do</div>
+                </div>
+                <svg data-note="Db4" class="Group1 pk a189" width="66" height="458" viewBox="0 0 66 458" fill="none" xmlns="http://www.w3.org/2000/svg"></svg>     
+                
+                <div data-note="D4" class="white-key2 pk a107" >
+                    <div></div>
+                    <div>Re</div>
+                </div>
+                <svg data-note="Eb4" class="Group1 pk a187" width="66" height="458" viewBox="0 0 66 458" fill="none" xmlns="http://www.w3.org/2000/svg"></svg> 
+                    
+                
+                <div data-note="E4" class="white-key3 pk a90" >
+                    <div >Mi</div>
+                </div>
+                <div data-note="F4" class="white-key1 pk a88 a88" >
+                    <div >Fa</div>
+                </div>
+                <svg data-note="Gb4" class="Group1 pk a8" width="66" height="458" viewBox="0 0 66 458" fill="none" xmlns="http://www.w3.org/2000/svg"></svg>     
+                
+                <div data-note="G4" class="white-key5 pk a67" >
+                    <div></div>
+                    <div>Sol</div>
+                </div>
+                <svg data-note="Ab4" class="Group1 pk a81" width="66" height="458" viewBox="0 0 66 458" fill="none" xmlns="http://www.w3.org/2000/svg"></svg> 
+                <div data-note="A4" class="white-key6 pk a86" >
+                    <div></div>
+                    <div>La</div>
+                </div>
+                <svg data-note="Bb4" class="Group1 pk a87" width="66" height="458" viewBox="0 0 66 458" fill="none" xmlns="http://www.w3.org/2000/svg"></svg> 
+                    
+                
+                <div data-note="B4" class="white-key3 pk a66" >
+                    <div >Si</div>
+                </div>
+                <div data-note="C5" class="white-key1 pk a78" >
+                    <div >Do</div>
+                </div>
+                <svg data-note="Db5" class="Group1 pk a69" width="66" height="458" viewBox="0 0 66 458" fill="none" xmlns="http://www.w3.org/2000/svg"></svg>     
+                
+                <div data-note="D5" class="white-key2 pk a77" >
+                    <div></div>
+                    <div>Re</div>
+                </div>
+                <svg data-note="Eb5" id="G17" class="Group1 pk a82" width="66" height="458" viewBox="0 0 66 458" fill="none" xmlns="http://www.w3.org/2000/svg"></svg> 
+                    
+                
+                <div data-note="E5" class="white-key3 pk a188" >
+                    <div >Mi</div>
+                </div>
+                <div data-note="F5" class="white-key1 pk a190" >
+                    <div>Fa</div>
+                </div>
+                <svg data-note="Gb5" class="Group1 pk a84" width="66" height="458" viewBox="0 0 66 458" fill="none" xmlns="http://www.w3.org/2000/svg"></svg>     
+                
+                <div data-note="G5" class="white-key5 pk a191" >
+                    <div></div>
+                    <div>Sol</div>
+                </div>
+                <svg data-note="Ab5" class="Group1 pk a89" width="66" height="458" viewBox="0 0 66 458" fill="none" xmlns="http://www.w3.org/2000/svg"></svg> 
+                <div data-note="A5" class="white-key6 pk a16" >
+                    <div></div>
+                    <div>La</div>
+                </div>
+                <svg data-note="Bb5" class="Group1 pk a85" width="66" height="458" viewBox="0 0 66 458" fill="none" xmlns="http://www.w3.org/2000/svg"></svg> 
+                    
+                
+                <div data-note="B5" class="white-key3 pk a97" >
+                    <div>Si</div>
+                </div>
+                <div data-note="C6" class="white-key1 pk a98" >
+                    <div>Do</div>
+                </div>
+                <svg data-note="Db6" class="Group1 pk a73" width="66" height="458" viewBox="0 0 66 458" fill="none" xmlns="http://www.w3.org/2000/svg"></svg>     
+                
+                <div data-note="D6" class="white-key2 pk a99" >
+                    <div></div>
+                    <div>Re</div>
+                </div>
+                <svg data-note="Eb6" class="Group1 pk a79" width="66" height="458" viewBox="0 0 66 458" fill="none" xmlns="http://www.w3.org/2000/svg"></svg> 
+                    
+                
+                <div data-note="E6" class="white-key3 pk a37" >
+                    <div >Mi</div>
+                </div>
+                <div data-note="F6" class="white-key1 pk a40" >
+                    <div >Fa</div>
+                </div>
+                <svg data-note="Gb6" class="Group1 pk a80" width="66" height="458" viewBox="0 0 66 458" fill="none" xmlns="http://www.w3.org/2000/svg"></svg>     
+                
+                <div data-note="G6" class="white-key5 pk a39" >
+                    <div></div>
+                    <div>Sol</div>
+                </div>
+                <svg data-note="Ab6" class="Group1 pk a219" width="66" height="458" viewBox="0 0 66 458" fill="none" xmlns="http://www.w3.org/2000/svg"></svg> 
+                <div data-note="A6" class="white-key6 pk a96" >
+                    <div></div>
+                    <div>La</div>
+                </div>
+                <svg data-note="Bb6" class="Group1 pk a221" width="66" height="458" viewBox="0 0 66 458" fill="none" xmlns="http://www.w3.org/2000/svg"></svg>   
 
-  <!-- Contact Me section Start -->
-  <section class="contact" id="contact">
-    <div class="content">
-      <div class="title"><span>Contact Me</span></div>
-      <div class="text">
-        <div class="topic">Have Any Project?</div>
-        <p>
-          "If you have any exciting projects in mind, don't hesitate to get in touch with me through email at
-          nadintibhargav@gmail.com, connect on LinkedIn at
-          <a href="https://www.linkedin.com/in/nrbhargav" target="_blank">https://www.linkedin.com/in/nrbhargav</a>, or simply
-          give me a call at 8328098429. Looking forward to collaborating with you!"
-        </p>
-        <div class="button">
-          <button>Let's Chat</button>
+                <div data-note="B6" class="white-key3 pk a110" >
+                    <div >Si</div>
+                </div>
+                <span></span>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+        
 
-  <!-- Footer Section Start -->
-  <footer>
-    <div class="text">
-      <span>Created By <a href="#">N.R.Bhargav</a> | &#169; 2023 All Rights Reserved</span>
-    </div>
-  </footer>
+   </section>
+
+
+
+   <audio src="sound/C2.mp3" id="C2" class="e65"></audio>
+   <audio src="sound/Db2.mp3" id="Db2" class="e49" ></audio>
+   <audio src="sound/D2.mp3" id="D2" class="e83"></audio>
+   <audio src="sound/Eb2.mp3" id="Eb2" class="e50"></audio>
+   <audio src="sound/E2.mp3" id="E2" class="e68"></audio>
+   <audio src="sound/F2.mp3" id="F2" class="e70"></audio>
+   <audio src="sound/Gb2.mp3" id="Gb2" class="e51"></audio>
+   <audio src="sound/G2.mp3" id="G2" class="e71"></audio>
+   <audio src="sound/Ab2.mp3" id="Ab2" class="e52"></audio>
+   <audio src="sound/A2.mp3" id="A2" class="e72"></audio>
+   <audio src="sound/Bb2.mp3" id="Bb2" class="e53"></audio>
+   <audio src="sound/B2.mp3" id="B2" class="e74"></audio>
+
+   <audio src="sound/C3.mp3" id="C3" class="e75"></audio>
+   <audio src="sound/Db3.mp3" id="Db3" class="e54"></audio>
+   <audio src="sound/D3.mp3" id="D3" class="e76"></audio>
+   <audio src="sound/Eb3.mp3" id="Eb3" class="e55"></audio>
+   <audio src="sound/E3.mp3" id="E3" class="e186"></audio>
+   <audio src="sound/F3.mp3" id="F3" class="e222"></audio>
+   <audio src="sound/Gb3.mp3" id="Gb3" class="e56"></audio>
+   <audio src="sound/G3.mp3" id="G3" class="e13"></audio>
+   <audio src="sound/Ab3.mp3" id="Ab3" class="e57"></audio>
+   <audio src="sound/A3.mp3" id="A3" class="e100"></audio>
+   <audio src="sound/Bb3.mp3" id="Bb3" class="e48"></audio>
+   <audio src="sound/B3.mp3" id="B3" class="e101"></audio>
+
+   <audio src="sound/C4.mp3" id="C4" class="e102"></audio>
+   <audio src="sound/Db4.mp3" id="Db4" class="e189"></audio>
+   <audio src="sound/D4.mp3" id="D4" class="e107"></audio>
+   <audio src="sound/Eb4.mp3" id="Eb4" class="e187"></audio>
+   <audio src="sound/E4.mp3" id="E4" class="e90"></audio>
+   <audio src="sound/F4.mp3" id="F4" class="e88"></audio>
+   <audio src="sound/Gb4.mp3" id="Gb4" class="e8"></audio>
+   <audio src="sound/G4.mp3" id="G4" class="e67"></audio>
+   <audio src="sound/Ab4.mp3" id="Ab4" class="e81" ></audio>
+   <audio src="sound/A4.mp3" id="A4" class="e86"></audio>
+   <audio src="sound/Bb4.mp3" id="Bb4" class="e87"></audio>
+   <audio src="sound/B4.mp3" id="B4" class="e66"></audio>
+
+   <audio src="sound/C5.mp3" id="C5" class="e78"></audio>
+   <audio src="sound/Db5.mp3" id="Db5" class="e69"></audio>
+   <audio src="sound/D5.mp3" id="D5" class="e77"></audio>
+   <audio src="sound/Eb5.mp3" id="Eb5" class="e82"></audio>
+   <audio src="sound/E5.mp3" id="E5" class="e188"></audio>
+   <audio src="sound/F5.mp3" id="F5" class="e190"></audio>
+   <audio src="sound/Gb5.mp3" id="Gb5" class="e84"></audio>
+   <audio src="sound/G5.mp3" id="G5" class="e191"></audio>
+   <audio src="sound/Ab5.mp3" id="Ab5" class="e89"></audio>
+   <audio src="sound/A5.mp3" id="A5" class="e16"></audio>
+   <audio src="sound/Bb5.mp3" id="Bb5" class="e85"></audio>
+   <audio src="sound/B5.mp3" id="B5" class="e97"></audio>
+
+   <audio src="sound/C6.mp3" id="C6" class="e98"></audio>
+   <audio src="sound/Db6.mp3" id="Db6" class="e73"></audio>
+   <audio src="sound/D6.mp3" id="D6" class="e99"></audio>
+   <audio src="sound/Eb6.mp3" id="Eb6" class="e79"></audio>
+   <audio src="sound/E6.mp3" id="E6" class="e37"></audio>
+   <audio src="sound/F6.mp3" id="F6" class="e40"></audio>
+   <audio src="sound/Gb6.mp3" id="Gb6" class="e80"></audio>
+   <audio src="sound/G6.mp3" id="G6" class="e39"></audio>
+   <audio src="sound/Ab6.mp3" id="Ab6" class="e219"></audio>
+   <audio src="sound/A6.mp3" id="A6" class="e96"></audio>
+   <audio src="sound/Bb6.mp3" id="Bb6" class="e221"></audio>
+   <audio src="sound/B6.mp3" id="B6"  class="e110"></audio>
+
+   <audio  src="metro/metronome.mp3" class="me"></audio>
+   
+  
+
+  
 
   <script src="script.js"></script>
+
 </body>
 
 </html>
